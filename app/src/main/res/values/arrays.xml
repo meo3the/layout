@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pointArray">
+        <item>Hai Bà Trưng</item>
+        <item>Bắc Từ Liêm</item>
+        <item>Cầu Giấy</item>
+        <item>Đống Đa</item>
+        <item>Hà Đông</item>
+    </string-array>
+</resources>

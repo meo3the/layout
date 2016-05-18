@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffd618</color>
+    <color name="colorPrimaryDark">#ffd618</color>
+    <color name="colorAccent">#000008</color>
+    <color name="spinnerBackground">#322e22</color>
+    <color name="editTextBackground">#7f6b0c</color>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="book_the_taxi">Book the taxi</string>
+</resources>
