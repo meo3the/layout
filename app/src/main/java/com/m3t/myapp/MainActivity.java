@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowInsets;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -13,7 +14,6 @@ import android.widget.TimePicker;
 
 import java.util.Calendar;
 
-import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -29,14 +29,19 @@ public class MainActivity extends AppCompatActivity {
     EditText etTime;
     @BindView(R.id.etStop)
     EditText etStop;
-    @BindArray(R.array.pointArray)
-    String[] pointArray;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this.getApplicationContext(), R.array.pointArray, R.layout.simple_spinner_item);
+        adapter1.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this.getApplicationContext(), R.array.pointArray, R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+        spnStartPoint.setAdapter(adapter1);
+        spnEndPoint.setAdapter(adapter2);
     }
 
     @OnClick({R.id.etDate, R.id.etTime})
